@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import { useUsersStore } from './store/features'
+import { HomePage } from './presentation/pages';
 
 function App() {
+  const values = {
+    "name": "Marvin",
+    "email": "marlon@email.com",
+    "phone": "19999876543"
+}
+
+  const setAllUsers = useUsersStore(state => state.setAllUsers)
+  const addNewUser = useUsersStore(state => state.addNewUser)
+
+  const users = useUsersStore(state => state.users)
+
+  console.log("===users", users)
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => addNewUser(values)}>Add new user</button>
+      <HomePage />
     </div>
   );
 }

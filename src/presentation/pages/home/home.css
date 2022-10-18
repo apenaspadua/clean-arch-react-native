@@ -1,0 +1,49 @@
+
+  
+  .btn {
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .btn-edit {
+    background-color: #008cba;
+  }
+  
+  .btn-delete {
+    background-color: #f44336;
+  }
+  
+  .btn-view {
+    background-color: #e7e7e7;
+    color: black;
+  }
+  
+  .btn-add {
+    background-color: #f45646;
+  }
+  
+  .loading-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .info-container {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #009879;
+  }
+  
+  .info-container > h1 {
+    color: #fff;
+  }
+  
